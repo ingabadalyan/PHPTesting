@@ -13,3 +13,8 @@ docker run --rm --interactive --tty \
 ```bash
 docker run -it --rm  --user $(id -u):$(id -g) --name StackExchangeApi -v "$PWD":/usr/src -w /usr/src zaherg/php-7.2-xdebug-alpine php vendor/bin/phpunit
 ```
+
+
+### gitlab-ci.yml can be used to configure continuous integration system
+
+### The test coverage and the test report will be generated and stored as artifacts in the pipeline
