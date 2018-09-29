@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://api.stackexchange.com/2.2/answers?order=desc&sort=activity&site=stackoverflow#",
+  "type": "object",
+  "items": {
+    "type": "array",
+    "items": [
+      {
+        "type": "object",
+        "properties": {
+          "owner": {
+            "type": "object",
+            "properties": {
+              "reputation": {
+                "type": "integer"
+              },
+              "user_id": {
+                "type": "integer"
+              },
+              "user_type": {
+                "type": "string"
+              },
+              "profile_image": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "link": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "reputation",
+              "user_id",
+              "user_type",
+              "profile_image",
+              "display_name",
+              "link"
+            ]
+          },
+          "is_accepted": {
+            "type": "boolean"
+          },
+          "score": {
+            "type": "integer"
+          },
+          "last_activity_date": {
+            "type": "integer"
+          },
+          "last_edit_date": {
+            "type": "integer"
+          },
+          "creation_date": {
+            "type": "integer"
+          },
+          "answer_id": {
+            "type": "integer"
+          },
+          "question_id": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "owner",
+          "is_accepted",
+          "score",
+          "last_activity_date",
+          "last_edit_date",
+          "creation_date",
+          "answer_id",
+          "question_id"
+        ]
+      }
+    ]
+  },
+  "required": [
+    "items",
+    "has_more",
+    "quota_max",
+    "quota_remaining"
+  ]
+}

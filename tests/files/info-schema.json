@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://api.stackexchange.com/2.2/info?site=stackoverflow#",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "new_active_users": {
+              "type": "integer"
+            },
+            "total_users": {
+              "type": "integer"
+            },
+            "badges_per_minute": {
+              "type": "number"
+            },
+            "total_badges": {
+              "type": "integer"
+            },
+            "total_votes": {
+              "type": "integer"
+            },
+            "total_comments": {
+              "type": "integer"
+            },
+            "answers_per_minute": {
+              "type": "number"
+            },
+            "questions_per_minute": {
+              "type": "number"
+            },
+            "total_answers": {
+              "type": "integer"
+            },
+            "total_accepted": {
+              "type": "integer"
+            },
+            "total_unanswered": {
+              "type": "integer"
+            },
+            "total_questions": {
+              "type": "integer"
+            },
+            "api_revision": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "new_active_users",
+            "total_users",
+            "badges_per_minute",
+            "total_badges",
+            "total_votes",
+            "total_comments",
+            "answers_per_minute",
+            "questions_per_minute",
+            "total_answers",
+            "total_accepted",
+            "total_unanswered",
+            "total_questions",
+            "api_revision"
+          ]
+        }
+      ]
+    },
+    "has_more": {
+      "type": "boolean"
+    },
+    "quota_max": {
+      "type": "integer"
+    },
+    "quota_remaining": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "items",
+    "has_more",
+    "quota_max",
+    "quota_remaining"
+  ],
+  "additionalProperties": true
+}

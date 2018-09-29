@@ -1,0 +1,8 @@
+tests:
+  image: zaherg/php-7.2-xdebug-alpine
+  scripts:
+    -  php vendor/bin/phpunit
+  artifacts:
+    paths:
+    - reports/coverage
+    expire_in: 1 week
